@@ -19,6 +19,13 @@
 			
 			<div id="content">
 			
+			<!-- create a button: add customer -->
+			<button 
+				onclick="window.location.href='showFormForAdd'; return false;"
+				class="add-button">
+				Add Customer
+			</button>
+			
 			<!-- Add HTML table here -->
 			<table>
 				<tr>
