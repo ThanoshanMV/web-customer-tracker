@@ -47,6 +47,7 @@ public class CustomerController {
 	@PostMapping("/saveCustomer")
 	public String saveCustomer(@ModelAttribute("customer") Customer theCustomer) {
 		
+		// call service to save this customer
 		customerService.saveCustomer(theCustomer);
 		
 		return "redirect:/customer/list";
@@ -64,5 +65,14 @@ public class CustomerController {
 		
 		// return the form
 		return "customer-form";
+	}
+	
+	@GetMapping("/deleteCustomer")
+	public String deleteCustomer(@RequestParam("customerId") int theId) {
+		
+		// call service to delete customer based on this id
+		customerService.deleteCustomer(theId);
+		
+		return "redirect:/customer/list";
 	}
 }
