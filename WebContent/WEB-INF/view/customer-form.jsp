@@ -25,6 +25,10 @@
 			
 			<!-- HTML Form -->
 			<form:form action="saveCustomer" modelAttribute="customer" method="POST">
+				
+				<!-- need to associate data with customer id -->
+				<form:hidden path="id" />
+			
 				First Name: <form:input type="text" path="firstName"/>
 				<br/>
 				Last Name: <form:input type="text" path="lastName"/>
